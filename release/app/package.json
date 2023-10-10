@@ -1,0 +1,18 @@
+{
+  "name": "scrapecomfort",
+  "version": "2.0.0",
+  "description": "A desktop app that can easily scrape pages with local browser and then extract data with AI",
+  "license": "MIT",
+  "author": {
+    "name": "Daniil Volynkin",
+    "email": "indieplatforms@gmail.com",
+    "url": "https://twitter.com/dvvolynkin"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "postinstall": "npm run rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
+  },
+  "dependencies": {}
+}
